@@ -46,7 +46,7 @@ from libraries.common import *
 The version has  some bugs,please waiting for upgrade.
 
 #### issue
-if you have some good ideas or some sugguest, Welcome to leave a message for me 😁
+if you have some good ideas or some sugguest, Welcome to leave a message for me or discuss😁
 
 
 
