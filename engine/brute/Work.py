@@ -38,8 +38,9 @@ class Work(object):
 					model = str(get_task["model"])
 					target = str(get_task["target"])
 					taskid = str(get_task["taskid"])
-
+					#print model,target,taskid
 					self.poc_files = get_brute_poc(model)
+					print model,target,taskid,self.poc_files
 					# 执行poc
 					if len(self.poc_files) > 0 :
 						for poc_path in self.poc_files :
@@ -47,10 +48,10 @@ class Work(object):
 							t = Brute(taskid= taskid ,target = target,poc_path= poc_path,model = model)
 							t.run()
 							self.exploit.extend(t.task)
-					#print len(self.exploit)
+					print len(self.exploit)
 					self.pool.map_async(exploit,self.exploit)
 				except:
 					pass
 
-# t = Work()
-# t.run()
+#t = Work()
+#t.run()

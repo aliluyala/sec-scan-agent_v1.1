@@ -12,16 +12,16 @@ import os
 #**************************************************设置基础路径********************************************************************
 
 
-BASE_DIR = os.getcwd().split("sec-exp-scanner")[0]
+BASE_DIR = os.getcwd().split("sec-scan-agent")[0]
 
 # #日志文件目录
 # LOG_PATH = BASE_DIR  +" sec-exp-scanner/log/"  
 
 #POC插件总目录
-POC_PATH = BASE_DIR+"sec-exp-scanner/models/"
+POC_PATH = BASE_DIR+"sec-scan-agent/models/"
 
 #字典目录
-DICT_PATH = BASE_DIR+"sec-exp-scanner/dictionary/"
+DICT_PATH = BASE_DIR+"sec-scan-agent/dictionary/"
 
 #**************************************************-判断目标工具***********************************************************
 

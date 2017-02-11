@@ -25,6 +25,17 @@ redis_log_db = 7
 redis_result_db = 8
 
 ```
+if you changed dir name,please modify "common/func.py" file content,as follow:
+```
+BASE_DIR = os.getcwd().split("sec-scan-agent")[0]
+
+#POC插件总目录
+POC_PATH = BASE_DIR+"sec-scan-agent/models/"
+
+#字典目录
+DICT_PATH = BASE_DIR+"sec-scan-agent/dictionary/"
+```
+
 excute command,as follow:
 ```
 #this is add task 

@@ -9,21 +9,26 @@ import dns.resolver
 class BingScan(object):
 	def __init__(self,  target = "",exp_args = "", username = "",password = ""):
 		if is_domain(target):
-			self.target = target.split(".")[-2]+'.'+target.split(".")[-1]
-			self.username = str(username)+"@"+str(self.target)
+			if target.split(".")[-1] == "cn":
+				self.target = target.split(".")[-3]+'.'+target.split(".")[-2]+'.'+'cn'
+				self.username = str(username)+"@"+str(self.target)
+			else:
+				self.target = target.split(".")[-2]+'.'+target.split(".")[-1]
+				self.username = str(username)+"@"+str(self.target)
 		else:
 			return False
 		self.password = password
 		self.result = []
 
 	def scanemail(self):
+		# print self.target,self.username,self.password
 		browser = Browser("phantomjs")
 		url = 'https://en.exmail.qq.com'
 		try:
 			browser.visit(url)
 		except Exception as e:
 			return
-		#fill in username and password
+
 		browser.find_by_id('inputuin').fill(self.username)
 		browser.find_by_id('pp').fill(self.password)
 		#click the button of login
@@ -42,19 +47,21 @@ class BingScan(object):
 			browser.quit()
 
 	def run(self):
-		try:
-			MX = dns.resolver.query(self.target,'MX')
-			for result in MX:
-				if "qq.com" in str(result.exchange):
-					t = "ok"
-				else:
-					return []
-			self.scanemail()
-		except:
-			pass
+		self.scanemail()
+		# try:
+			# MX = dns.resolver.query(self.target,'MX')
+			# for result in MX:
+			# 	if "qq.com" in str(result.exchange):
+			# 		t = "ok"
+			# 	else:
+			# 		return []
+
+			#self.scanemail()
+		# except:
+		# 	pass
 
 
-# t = BingScan(target="lagou.com",exp_args = '',username = "siyu.li",password = "tiandao123")
+# t = BingScan(target="vipkid.com.cn",exp_args = '',username = "siyu.li",password = "tiandao123")
 # t.run()
 # print t.result
 

@@ -60,5 +60,5 @@ class TaskCenter(object):
 
 
 
-t  = TaskCenter(taskid="taskid-tsdf-1212",target="lagou.com",model="subdomain")
+t  = TaskCenter(taskid="taskid-tsdf-1212",target="vipkid.com.cn",model="mail")
 t.run()
