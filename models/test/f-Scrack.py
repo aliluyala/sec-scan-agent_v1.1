@@ -23,7 +23,7 @@ TIMEOUT = 10
 I = 0
 USER_DIC = {
     "ftp":['www','admin','root','db','wwwroot','data','web','ftp'],
-    "mysql":['root','test','admin','lagou','Lagou','3wcoffee','3Wcoffee','lagou_yewu_rw','lagou_yewu_ro','lagouro','lagourw','sync','lagou_service_rw','lagou_service_ro','lagou_plat_rw','lagou_plat_ro','canal','zabbix'],
+    "mysql":['root','test','admin','canal','zabbix'],
     "mssql":['sa'],
     "web":['null'],
     "telnet":['administrator','admin','root','cisco'],
