@@ -1,7 +1,7 @@
 [![support](https://baikal.io/badges/x)](https://baikal.io/x) [![License](https://img.shields.io/:license-gpl3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![platform](https://img.shields.io/badge/platform-osx%2Flinux%2Fwindows-green.svg)](https://github.com/Canbing007/sec-portscan-agent)
 [![python](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/downloads/)
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/85fd7d60ad8f47ef8015a57068de2f0c/badge.svg)](https://www.quantifiedcode.com/app/project/85fd7d60ad8f47ef8015a57068de2f0c)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/c38266fc482844e5b5d451583b1a04e9/badge.svg)](https://www.quantifiedcode.com/app/project/c38266fc482844e5b5d451583b1a04e9)
 
 # sec-scan-agent
 this is agent in Python,use distributed design
